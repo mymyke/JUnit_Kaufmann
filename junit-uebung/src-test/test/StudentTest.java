@@ -13,7 +13,7 @@ import daten.Student;
 
 public class StudentTest {
 
-
+	
 	@Test
 	public void constructorWithValidArguments() {
 		Student s = new Student("H", "B");
@@ -34,6 +34,19 @@ public class StudentTest {
 		assertEquals("Klaus", s.getFirstName());
 		assertEquals("Unger", s.getLastName());
 	}
+	@Test
+	public void TestGetSetFirstname(){
+		Student s = new Student("F", "D");
+		s.setFirstname("hans");
+		assertEquals(s.getFirstname(), "hans");
+	}
+	@Test
+	public void TestGetSetLastname(){
+		Student s = new Student("F", "D");
+		s.setLastname("hans");
+		assertEquals(s.getLastname(), "hans");
+	}
+
 	@Test
 	public void TestCompareTo(){
 		Student o=new Student("hans","Berger",true);
